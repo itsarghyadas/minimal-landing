@@ -60,7 +60,7 @@ export default function Home() {
               delay: 0.3,
               ease: "easeInOut",
             }}
-            className="flex items-center justify-center gap-x-5 max-w-md mx-auto w-full"
+            className="flex flex-col md:flex-row gap-y-2.5 items-center justify-center gap-x-5 max-w-md mx-auto w-full"
           >
             <button className="w-full px-5 font-mono cursor-pointer font-bold h-10 rounded-md text-white bg-indigo-500 hover:bg-indigo-600 shadow-black/25 ring-1 ring-indigo-500/50 shadow-[inset_0px_-2px_4px_rgba(0,0,0,0.6)] inline-flex items-center justify-center transition-colors duration-100 ease-linear">
               Connect One
