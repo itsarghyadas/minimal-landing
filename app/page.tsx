@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { Github } from "lucide-react";
 
 export default function Home() {
   return (
@@ -88,7 +89,7 @@ export default function Home() {
             ease: "easeInOut",
             easings: "cubic-bezier(.8,0,.2,1)",
           }}
-          className="dashboard-img-container relative overflow-hidden rounded-xl md:rounded-2xl max-w-7xl mt-24 mx-auto z-10 shadow-[0_0_6rem_#6040ff60,0_0_2rem_#8585ff40]"
+          className="dashboard-img-container relative overflow-hidden rounded-xl md:rounded-2xl max-w-7xl mt-16 md:mt-24 mx-auto z-10 shadow-[0_0_6rem_#6040ff60,0_0_2rem_#8585ff40]"
         >
           <motion.div
             initial={{
