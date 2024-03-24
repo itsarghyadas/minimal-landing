@@ -7,8 +7,12 @@ import { ArrowRightIcon } from "lucide-react";
 import { BorderBeam } from "./magicui/border-beam";
 
 export default function HeroSection() {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isClient, setIsClient] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(0);
   useEffect(() => {
+    setIsClient(true);
+    setWindowWidth(window.innerWidth);
+
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
