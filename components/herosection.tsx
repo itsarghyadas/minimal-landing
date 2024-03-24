@@ -54,7 +54,7 @@ export default function HeroSection() {
             delay: 0.2,
             ease: "easeInOut",
           }}
-          className="text-neutral-300/80 font-gabarito font-medium text-center text-xl max-w-md mx-auto text-balance leading-[1.5]"
+          className="text-neutral-300/80 font-gabarito font-medium text-center text-lg md:text-xl max-w-md mx-auto text-balance leading-[1.5]"
         >
           So get our landing page template and make your conversion rate go
           brrrr
