@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import TextShimmer from "@/components/magicui/text-shimmer";
@@ -7,6 +7,15 @@ import { ArrowRightIcon } from "lucide-react";
 import { BorderBeam } from "./magicui/border-beam";
 
 export default function HeroSection() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <main className="flex flex-col items-center justify-end lg:justify-between p-7 md:p-10 lg:p-24">
       <div className="z-10 flex py-5 items-center justify-center">
@@ -54,7 +63,7 @@ export default function HeroSection() {
             delay: 0.2,
             ease: "easeInOut",
           }}
-          className="text-neutral-300/80 font-gabarito font-medium text-center text-lg md:text-xl max-w-md mx-auto text-balance leading-[1.5]"
+          className="text-neutral-400/60 font-gabarito font-medium text-center text-lg md:text-xl max-w-md mx-auto text-balance leading-[1.5]"
         >
           So get our landing page template and make your conversion rate go
           brrrr
@@ -131,7 +140,7 @@ export default function HeroSection() {
           alt="Dashboard Mockup"
         ></motion.img>
         <BorderBeam
-          size={250}
+          size={windowWidth < 768 ? 120 : 250}
           duration={12}
           delay={9}
           colorFrom="#ffffff"
