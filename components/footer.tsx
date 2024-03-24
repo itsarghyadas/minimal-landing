@@ -1,4 +1,5 @@
 import React from "react";
+import { ArrowRightIcon } from "lucide-react";
 
 const footerLinks = [
   {
@@ -54,14 +55,21 @@ export default function Footer() {
               <img
                 src="https://magicui.design/icon.png"
                 alt="Magic UI"
-                className="w-10 h-10 rounded-md"
+                className="w-7 h-7 rounded-md"
               />
-              <h2 className="font-bold">Startup Template</h2>
+
+              <h2 className="font-medium text-lg">Magicui Template</h2>
             </div>
           </button>
-          <p className="max-w-xs text-neutral-500 font-medium text-[15px]">
-            Raise your conversion rate with our landing page template.
+          <p className="max-w-xs text-neutral-300/80 font-medium text-[15px]">
+            Raise your conversion rate with our landing page template. And also
+            check out our best in the market Animated components.
           </p>
+          <button className="group w-32 px-5 cursor-pointer font-[520] h-10 rounded-full bg-gradient-to-b bg-neutral-800 hover:bg-neutral-700 border border-neutral-700/50  flex items-center justify-center relative transition-colors ease-linear duration-100 text-white">
+            <div className="rounded-full absolute inset-0 shadow border-t border-neutral-500/30" />
+            Magicui
+            <ArrowRightIcon className="size-3 ml-1 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+          </button>
         </div>
 
         <div className="right-footer-part w-1/2 lg:w-1/3">
@@ -70,7 +78,7 @@ export default function Footer() {
               {footerLinks.map((link) => (
                 <li className="footer-link-item" key={link.id}>
                   <a
-                    className="text-sm hover:text-white font-medium active:underline active:underline-offset-4"
+                    className="text-base hover:text-white font-medium hover:underline hover:underline-offset-4 active:underline active:underline-offset-4"
                     href={link.url}
                   >
                     {link.title}

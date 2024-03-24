@@ -1,10 +1,26 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import TextShimmer from "@/components/magicui/text-shimmer";
+import { ArrowRightIcon } from "lucide-react";
+import { BorderBeam } from "./magicui/border-beam";
 
 export default function HeroSection() {
   return (
     <main className="flex flex-col items-center justify-end lg:justify-between p-7 md:p-10 lg:p-24">
+      <div className="z-10 flex py-5 items-center justify-center">
+        <div
+          className={cn(
+            "group rounded-full border  text-base text-white transition-all ease-in hover:cursor-pointer border-indigo-500/20 bg-neutral-800/50 hover:bg-neutral-800"
+          )}
+        >
+          <TextShimmer className="inline-flex items-center justify-center px-4 py-1">
+            <span>✨ Introducing Magic UI</span>
+            <ArrowRightIcon className="size-3 ml-1 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+          </TextShimmer>
+        </div>
+      </div>
       <div className="max-w-2xl mx-auto flex flex-col gap-y-5">
         <motion.h2
           initial={{
@@ -20,7 +36,7 @@ export default function HeroSection() {
             delay: 0.1,
             ease: "easeInOut",
           }}
-          className="font-bold text-transparent bg-gradient-to-br from-neutral-400 via-neutral-100 to-white bg-clip-text text-4xl lg:text-[50px] font-average leading-[1.25] text-center text-balance"
+          className="font-black text-transparent bg-gradient-to-br from-neutral-600 via-neutral-100 to-white bg-clip-text text-4xl lg:text-[50px] leading-[1.25] text-center text-balance"
         >
           Not having a good landing page can suck
         </motion.h2>
@@ -38,7 +54,7 @@ export default function HeroSection() {
             delay: 0.2,
             ease: "easeInOut",
           }}
-          className="text-neutral-400/80 font-semibold text-center text-xl max-w-md mx-auto text-balance font-average leading-[1.5]"
+          className="text-neutral-300/80 font-gabarito font-medium text-center text-xl max-w-md mx-auto text-balance leading-[1.5]"
         >
           So get our landing page template and make your conversion rate go
           brrrr
@@ -62,7 +78,7 @@ export default function HeroSection() {
           <button className="w-full px-5 font-mono cursor-pointer font-bold h-10 rounded-md text-white bg-indigo-500 hover:bg-indigo-600 shadow-black/25 ring-1 ring-indigo-500/50 shadow-[inset_0px_-2px_4px_rgba(0,0,0,0.6)] inline-flex items-center justify-center transition-colors duration-100 ease-linear">
             Connect One
           </button>
-          <button className="w-full px-5 cursor-pointer font-[520] h-10 rounded-md bg-gradient-to-b bg-neutral-800 hover:bg-neutral-700 border border-neutral-700/50  flex items-center justify-center relative transition-colors ease-linear duration-100 text-white">
+          <button className="w-full px-5 font-mono cursor-pointer font-[520] h-10 rounded-md bg-gradient-to-b bg-neutral-800 hover:bg-neutral-700 border border-neutral-700/50  flex items-center justify-center relative transition-colors ease-linear duration-100 text-white">
             <div className="rounded-md absolute inset-0 shadow border-t border-neutral-500/30" />
             Connect Two
           </button>
@@ -114,6 +130,13 @@ export default function HeroSection() {
           src="/dashboard-mockup.png"
           alt="Dashboard Mockup"
         ></motion.img>
+        <BorderBeam
+          size={250}
+          duration={12}
+          delay={9}
+          colorFrom="#ffffff"
+          colorTo="#ffffff80"
+        />
       </motion.div>
     </main>
   );
