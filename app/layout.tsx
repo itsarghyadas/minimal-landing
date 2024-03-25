@@ -1,25 +1,8 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
-import { EB_Garamond, Average, Gabarito } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
-
-const garamond = EB_Garamond({
-  subsets: ["latin"],
-  variable: "--font-eb-garamond",
-});
-
-const average = Average({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-average",
-});
-
-const gabarito = Gabarito({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-gabarito",
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -32,11 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${GeistSans.variable} ${GeistMono.variable} ${garamond.variable} ${average.variable} ${gabarito.variable}`}
-    >
-      <body className="bg-[#171717] text-white font-gabarito">{children}</body>
+    <html lang="en">
+      <body className={`${GeistSans.variable} ${GeistMono.variable}`}>
+        <ThemeProvider>
+          <section className="font-sans">{children}</section>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

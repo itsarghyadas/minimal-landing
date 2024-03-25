@@ -75,9 +75,13 @@
     @apply bg-background text-foreground;
   }
 
-  .dashboard-image {
-    /* mask-image: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)); */
+  .dark .dashboard-image {
     -webkit-mask-image: linear-gradient(to top, transparent 25%, black 75%);
     mask-image: linear-gradient(to top, transparent 25%, black 75%);
+  }
+
+  .dashboard-image {
+    -webkit-mask-image: linear-gradient(to top, transparent 25%, white 75%);
+    mask-image: linear-gradient(to top, transparent 25%, white 75%);
   }
 }
