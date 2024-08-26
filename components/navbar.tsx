@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import ModeToggle from "@/components/mode-toggle";
 
 export default function Navbar() {
@@ -5,11 +6,7 @@ export default function Navbar() {
     <header className="h-20 py-7 px-2 border-b sticky top-0 z-[99] backdrop-blur-md border-dashed flex items-center justify-between">
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 w-full">
         <div className="flex items-center space-x-4">
-          <img
-            src="https://magicui.design/icon.png"
-            alt="Magic UI"
-            className="w-10 h-10 rounded-md"
-          />
+          <p className="text-2xl font-bold font-mono">MINIMAL</p>
         </div>
         <div className="flex items-center gap-x-5">
           <ModeToggle />

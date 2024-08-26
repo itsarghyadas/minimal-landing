@@ -21,9 +21,6 @@ const config = {
       fontFamily: {
         sans: ["var(--font-geist-sans)"],
         mono: ["var(--font-geist-mono)"],
-        garamond: ["var(--font-eb-garamond)"],
-        average: ["var(--font-average)"],
-        gabarito: ["var(--font-gabarito)"],
       },
       colors: {
         border: "hsl(var(--border))",

@@ -52,13 +52,7 @@ export default function Footer() {
         <div className="left-footer-part flex w-full flex-col gap-y-3.5 items-start justify-start pt-3 md:w-1/2 lg:w-1/3">
           <button>
             <div className="header-logo flex items-center space-x-2">
-              <img
-                src="https://magicui.design/icon.png"
-                alt="Magic UI"
-                className="w-7 h-7 rounded-md"
-              />
-
-              <h2 className="font-medium text-lg">Magicui Template</h2>
+              <p className="text-2xl font-bold font-mono">MINIMAL</p>
             </div>
           </button>
           <p className="max-w-xs dark:text-neutral-400/80 text-neutral-500/80 dark:font-normal font-medium text-[15px]">
@@ -67,7 +61,7 @@ export default function Footer() {
           </p>
           <button className="group w-fit px-2 text-[15px] font-[430] cursor-pointer h-9 rounded-md bg-gradient-to-b bg-neutral-800 hover:bg-neutral-700 border border-neutral-700/50 flex items-center justify-center relative transition-colors ease-linear duration-100 text-white">
             <div className="rounded-md absolute inset-0 shadow border-t border-neutral-500/30" />
-            Magicui
+            Start for free
             <ArrowRightIcon className=" size-4 ml-1 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
           </button>
         </div>
