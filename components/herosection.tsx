@@ -38,7 +38,7 @@ export default function HeroSection() {
             )}
           >
             <TextShimmer className="inline-flex items-center justify-center px-4 py-1">
-              <span>✨ Introducing my app</span>
+              <span>✨ Introducing MVP</span>
               <ArrowRightIcon className="size-3 ml-1 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
             </TextShimmer>
           </div>
